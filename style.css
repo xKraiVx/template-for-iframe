@@ -4,19 +4,45 @@ body {
     width: 100vw;
 }
 
-main{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    gap: 20px;
-}
-
 div {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: tomato;
     flex-grow: 1;
     min-height: 200px;
     min-width: 200px;
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.flex div{
+    background: tomato;
+}
+
+.grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+
+    @media screen and (max-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 480px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.grid div {
+    background: lightgreen;
 }
