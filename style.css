@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow: hidden;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+}
+
+div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: tomato;
+    flex-grow: 1;
+    min-height: 400px;
+    min-width: 400px;
+}
